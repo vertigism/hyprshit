@@ -1,0 +1,18 @@
+{
+    "allow_gamepad_permission": false,
+    "bring_back_oof": true,
+    "close_on_leave": false,
+    "discord_rpc_enabled": false,
+    "enable_gamemode": false,
+    "enable_hidpi": true,
+    "fflags": {
+        "DFIntTaskSchedulerTargetFps": 0,
+        "FFlagExample": true,
+        "FFlagGameBasicSettingsFramerateCap5": true,
+        "FFlagTaskSchedulerLimitTargetFpsTo2402": false
+    },
+    "server_location_indicator_enabled": false,
+    "touch_mode": "off",
+    "use_libsecret": false,
+    "use_opengl": false
+}

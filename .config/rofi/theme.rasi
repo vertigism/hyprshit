@@ -1,0 +1,111 @@
+* {
+    fg: #dcd7ba;
+    bg: #1f1f28;
+    accent: #2a2a37;
+    color: @fg;
+    background-color: @bg;
+    font: "0xProto Nerd Font Propo 16";
+}
+
+window {
+    width: 800px;
+    border: 2px;
+    border-color: @fg;
+    border-radius: 10px;
+}
+
+mainbox {
+    children: [inputbar, listview, mode-switcher];
+}
+
+inputbar {
+    background-color: @bg;
+    color: @fg;
+    spacing: 30px;
+    margin: 30px;
+    children: [textbox-prompt-colon, entry];
+}
+
+textbox-prompt-colon {
+    str: "";
+    background-color: @accent;
+    color: inherit;
+    expand: false;
+    padding: 12px 16px;
+    border-radius: 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+entry {
+    background-color: @accent;
+    color: inherit;
+    padding: 12px 20px;
+    border-radius: 10px;
+    placeholder: "Search...";
+    cursor-color: transparent;
+    vertical-align: 0.5;
+}
+
+listview {
+    background-color: @accent;
+    color: @fg;
+    columns: 1;
+    lines: 7;
+    spacing: 0;
+    cycle: false;
+    dynamic: false;
+    margin: 0 30px;
+    border-radius: 10px;
+}
+
+element {
+    background-color: inherit;
+    color: inherit;
+    padding: 12px;
+}
+
+element selected {
+    background-color: @fg;
+    color: @bg;
+    border-radius: 10px;
+}
+
+element-icon {
+    size: 1.65ch;
+    background-color: inherit;
+    margin: 0 14px 0 6px;
+}
+
+element-text {
+    background-color: inherit;
+    color: inherit;
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    spacing: 0;
+    cycle: true;
+    dynamic: false;
+}
+
+mode-switcher {
+    background-color: @accent;
+    color: @fg;
+    spacing: 0;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 15px;
+    color: inherit;
+    background-color: inherit;
+}
+
+button selected {
+    border-radius: 10px;
+    color: @bg;
+    background-color: @fg;
+}

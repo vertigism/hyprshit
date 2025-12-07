@@ -1,0 +1,84 @@
+{
+    "modules-left": [
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "clock"
+    ],
+
+    "hyprland/window": {
+        // "format": "{}",
+        "max-length": 50,
+        "rewrite": {
+            "": "Hyprland"
+        },
+        "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": ""
+        },
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "tooltip": false,
+        "on-click": "flatpak run org.pulseaudio.pavucontrol"
+    },
+
+    "network": {
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀", // 
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-disconnected": "⚠"
+    },
+
+    "cpu": {
+        "format": "{usage}% "
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%d %B %Y}</big>\n\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#dcd7ba'><b>{}</b></span>",
+                "days":     "<span color='#dcd7ba'><b>{}</b></span>",
+                "weeks":    "<span color='#7fb4ca'><b>W{}</b></span>",
+                "weekdays": "<span color='#e6c384'><b>{}</b></span>",
+                "today":    "<span color='#c34043'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "mode",
+            "on-scroll-down": "shift_down",
+            "on-scroll-up": "shift_up"
+        }
+    }
+}

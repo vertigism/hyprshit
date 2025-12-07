@@ -1,0 +1,23 @@
+configuration {
+    modi: "drun,clipboard:~/.config/rofi/scripts/cliphist.sh,powermenu:~/.config/rofi/scripts/powermenu.lua";
+
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    kb-move-char-back: "";
+    kb-mode-previous: "Left";
+    kb-move-char-forward: "";
+    kb-mode-next: "Right";
+    show-icons: true;
+    icon-theme: "Pop";
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
+
+    drun-display-format: "{name}";
+
+    display-drun: "󱓞 Apps"; //  Run
+    display-clipboard: " Clipboard";
+    display-powermenu: " Powermenu";
+}
+
+@theme "theme.rasi"
